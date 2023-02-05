@@ -1,4 +1,4 @@
-FROM --platform=linux/x86_64 mysql:8.0
+FROM mysql/mysql-server:8.0
 
 ENV TZ=UTC
 
