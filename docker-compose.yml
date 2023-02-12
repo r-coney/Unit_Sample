@@ -37,4 +37,4 @@ services:
       - db:/var/lib/mysql
 volumes:
   db:
-    name: laravel_db
+    name: unit_sample
