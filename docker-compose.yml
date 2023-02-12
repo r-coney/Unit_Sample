@@ -35,4 +35,4 @@ services:
       - db:/var/lib/mysql
 volumes:
   db:
-    name: ddd_todo
+    name: unit_sample
