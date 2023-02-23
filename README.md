@@ -6,9 +6,8 @@
 
 ## How to use
 
-1. `$ cd laravel_9`
-2. `$ mkdir src`
+1. `$ cd Unit_sample`
 3. `$ docker compose up -d`
-4. `$ docker compose exec app composer create-project --prefer-dist 'laravel/laravel=9.*' .`
-5. `$ docker compose exec app php artisan storage:link`
+3. `$ docker compose exec app php artisan key:generate`
+3. `$ docker compose exec app php artisan key:generate --env=testing`
 6. `$ docker compose exec app php artisan migrate:fresh --seed`
