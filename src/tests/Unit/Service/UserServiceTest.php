@@ -16,15 +16,12 @@ class UserServiceTest extends TestCase
      */
     public function IDに対応するユーザーを取得できること()
     {
-        // ユーザーを作成する
         $expectedUser = User::factory()->create();
 
-        // 作成したユーザーのidで検索する
         $userModel = new User();
-        $service = new UserService($userModel);
-        $targetUser = $service->findById($expectedUser->id);
+        $userService = new UserService($userModel);
+        $targetUser = $userService->get($expectedUser->id);
 
-        // 作成したユーザーと取得したユーザーを検証
         $this->assertSame($expectedUser->id, $targetUser->id);
     }
 }
