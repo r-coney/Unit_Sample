@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Models\User;
-use InvalidArgumentException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class UserService
@@ -24,10 +23,6 @@ class UserService
      */
     public function get(int $id): User
     {
-        if (is_null($id)) {
-            throw new InvalidArgumentException('User ID dose not exist');
-        }
-
         $result = $this->user->find($id);
 
         if (is_null($result)) {
