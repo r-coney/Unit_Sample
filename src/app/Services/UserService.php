@@ -22,7 +22,7 @@ class UserService
      * @param integer $id
      * @return User
      */
-    public function findById(int $id): User
+    public function get(int $id): User
     {
         if (is_null($id)) {
             throw new InvalidArgumentException('User ID dose not exist');
